@@ -1,4 +1,3 @@
-
 #!groovy
 
 
@@ -10,7 +9,7 @@ node ('master') {
                 checkout scm
             }
             stage("build dockr images") {
-        // sh "sudo docker build -t Myapp1 ."
+        sh "sudo docker build -t Myapp1 ."
         } 
 
     
