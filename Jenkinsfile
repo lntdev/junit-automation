@@ -19,18 +19,18 @@ pipeline {
             }
         }
 
-        stage('Test'){
-            steps{
-                sh 'cd src/ ; java -jar ../lib/junit-platform-console-standalone-1.7.0-all.jar -cp "." --select-class CarTest --reports-dir="reports"'
-                junit 'src/reports/*-jupiter.xml'
-            }
-        }
+        // stage('Test'){
+        //     steps{
+        //         sh 'cd src/ ; java -jar ../lib/junit-platform-console-standalone-1.7.0-all.jar -cp "." --select-class CarTest --reports-dir="reports"'
+        //         junit 'src/reports/*-jupiter.xml'
+        //     }
+        // }
 
-        stage('Deploy'){
-            steps{
-                sh 'cd src/ ; java App' 
-            }
-        }
+        // stage('Deploy'){
+        //     steps{
+        //         sh 'cd src/ ; java App' 
+        //     }
+        // }
     }
 
 }
